@@ -1,2 +1,24 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="stripe"></div>
+  <nav>
+    <div class="nav__brand">
+      <a href="./index.html">Newsy</a>
+    </div>
+    <div class="nav__brand__link">
+      <a href="./favorites.html">Favorites</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Your News</h1>
+    <div class="add-topic-container">
+      <h2>Add or Select a Topic</h2>
+      <form action="POST">
+        <input aria-label="Add a topic" id="add-topic" type="text" placeholder="Technology" />
+        <button id="submit-topic" class="button--primary">
+          Add
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <div class="topic-container"></div>
+  <script src="assets/js/index.js"></script>

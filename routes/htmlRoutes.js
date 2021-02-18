@@ -1,14 +1,11 @@
-var path = require("path");
-
-module.exports = function(app) {
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/index.html"));
-  });
-  app.get("/topic", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/topic.html"));
-  });
-  app.get("/favorites", function(req, res) {
-    res.sendFile(path.join(__dirname, "../client/favorites.html"));
-  });
-};
-
+export default function (app) {
+  app.get('/', function (req, res) {
+    res.render('index', { title: 'index' })
+  })
+  app.get('/topic', function (req, res) {
+    res.render('topic', { title: 'topic' })
+  })
+  app.get('/favorites', function (req, res) {
+    res.render('favorites', { title: 'favorites' })
+  })
+}
